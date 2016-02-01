@@ -1,0 +1,73 @@
+html, body {
+	margin: 0;
+	font-family: "Times New Roman", Times, serif;
+	background-image: url(images/background.jpg);
+	background-size: 1400px 1611px;
+	background-repeat: repeat;
+	background-attachment: fixed;
+    background-position: center; 
+	color: #333333;
+
+}
+
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+
+h1{
+	font-size: 60px;
+}
+
+#box{
+	width: 100%;
+	margin: 20px auto;
+	font-size: 14pt;
+}
+
+.p_text {
+	width: 100%;
+	margin: 20px auto;
+	font-size: 14pt;
+}
+
+.mytext {
+    width: 70px;
+}
+
+#button {
+	padding: 5px 10px;
+	font-size: 1em;
+	background: #B2B2CC;
+	border: 1px solid yellow;
+}
+
+#value{
+	font-weight: bold;
+}
+
+/* Tablet */
+@media only screen and (max-width: 960px){
+	#wrapper{
+		width: 720px;
+	}
+}
+
+/* Phone */
+@media only screen and (max-width: 720px){
+	#wrapper{
+		width: 100%;
+	}
+	.link{
+	display: block;
+	width: 100%;
+	}
+	article{
+		float: none;
+		width:100%;
+	}
+	aside{
+		float: none;
+		width:100%;
+	}

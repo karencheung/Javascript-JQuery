@@ -1,0 +1,31 @@
+html, body {
+	margin: 0;
+	font-family: helvetica, arial, sans-serif;
+}
+
+#box{
+	width: 530px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #5CB8E6;
+	font-size: 14pt;
+}
+
+#name{
+	display: inline-block;
+}
+
+#grade{
+	display: inline-block;
+}
+
+#credit{
+	display: inline-block;
+}
+
+#button3 {
+	padding: 5px 10px;
+	font-size: 1em;
+	background: #B2B2CC;
+	border: 1px solid #ffffff;
+}

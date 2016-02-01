@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Escape the Room</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<script>
+
+var name = prompt("What is your name?");
+alert(name + "," + " " + "you woke up on a bed..." + "you don't remember what happen but..." + "'Where am I?!?'");
+alert("You get off the bed and look around..." + "reached out for the door... but it was locked.");
+alert("You know you need to find something to help you get out..." + "There is only a bed, a sofa, and a coffee table in the room..." + "so... 'Lets search the room!'");
+alert("If you ever want to exit the game, enter 'exit' in any prompt box.")
+var exit = false;
+while (exit == false)
+{
+	var option1 = prompt("Where do you want to search? (bed, sofa, or coffee table) ")
+	
+	if (option1 == "bed") 
+	{
+		alert("You found a wooden box with a something inside... but it is locked.");
+		var option2 = prompt("Where do you want to search next? (sofa or coffee table)")
+		if (option2 == "sofa")
+		{
+			alert("You found a saw underneath the sofa cushion.");
+			alert("You used the saw to cut open the wooden box... you found a key!");
+			alert("You used the key to open the door... you see a hallway infront of you leading you stright to a light that is the outsde of the house... walk towards the light... sunddenly... you heard someting fell from above behind you... so you turned around and...");
+			alert("Before you realize it... a giant wolf-like monster with sharp teeth bit onto your waist ... you were bleeding... eventually... you lost conscious...");
+			alert("Game Over...");
+			exit=true;
+		}
+		else if (option2 == "coffee table")
+		{
+			alert("You found a gun.");
+			option3 = prompt("Where do you want to search next?(only sofa is left to search)");
+			if(option3 == "sofa")
+			{
+				alert("You found a saw underneath the sofa cushion.");
+				alert("You used the saw to cut open the wooden box... you found a key!");
+				alert("You used the key to open the door... you see a hallway infront of you leading you stright to a light that is the outsde of the house... walk towards the light... sunddenly... you heard someting fell from above behind you... you took out your gun and prepare to aim it at whatever is behind you...");
+				alert("Before you realize it... a giant wolf-like monster stand before your gun... it lift it's hand towards you but luckily you shoot it before it can take any further action...");
+				alert("You made it out the house alive!");
+				exit=true;
+			}
+			else if (option3=="exit")
+			{
+				exit=true;
+			}
+			else 
+			{
+				alert("Invalid input, try again.");
+			}
+		}
+		else if (option2=="exit")
+		{
+			exit=true;
+		}
+		else
+		{
+			alert("Invalid input, try again.");
+		}
+		
+	}
+	
+
+
+
+	else if(option1 == "sofa")
+	{
+		alert("You found a saw underneath the sofa cushion.");
+		option4 = prompt("Where do you want to search next? (bed or coffee table)");
+		if (option4 == "bed")
+		{
+			alert("You found a wooden box with a something inside... but it is locked.");
+			alert("You used the saw to cut open the wooden box... you found a key!");
+			alert("You used the key to open the door... you see a hallway infront of you leading you stright to a light that is the outsde of the house... walk towards the light... sunddenly... you heard someting fell from above behind you... so you turned around and...");			
+			alert("Before you realize it... a giant wolf-like monster with sharp teeth bit onto your waist ... you were bleeding... eventually... you lost conscious...");
+			alert("Game Over...");
+			exit=true;
+		}
+		else if (option4 == "coffee table")
+		{
+				alert("You found a gun.")
+				option5 = prompt("Where do you want to search next? (only bed is left to search)")
+				if (option5 == "bed")
+				{
+						alert("You found a wooden box with a something inside... but it is locked.");
+						alert("You used the saw to cut open the wooden box... you found a key!");
+						alert("You used the key to open the door... you see a hallway infront of you leading you stright to a light that is the outsde of the house... walk towards the light... sunddenly... you heard someting fell from above behind you... you took out your gun and prepare to aim it at whatever is behind you...");
+						alert("Before you realize it... a giant wolf-like monster stand before your gun... it lift it's hand towards you but luckily you shoot it before it can take any further action...");
+						alert("You made it out the house alive!");
+						exit=true;
+				}
+				else if (option5=="exit")
+				{
+					exit=true;
+				}
+				else
+				{
+					alert("Invalid input, try again.");
+				}
+		}
+		else if (option4=="exit")
+		{
+			exit=true;
+		}
+		else
+		{
+			alert("Invalid input, try again.");
+		}
+	}
+
+	else if(option1 == "coffee table")
+	{
+		alert("You found a saw underneath the sofa cushion.");
+		option6 = prompt("Where do you want to search next? (sofa or bed)");
+		if (option6 == "bed")
+		{
+			alert("You found a wooden box with a something inside... but it is locked.");
+			option7 = prompt("Where do you want to search next?");
+			if(option7 == "sofa")
+			{
+				alert("You found a saw underneath the sofa cushion.");
+				alert("You used the saw to cut open the wooden box... you found a key!");
+				alert("You used the key to open the door... you see a hallway infront of you leading you stright to a light that is the outsde of the house... walk towards the light... sunddenly... you heard someting fell from above behind you... you took out your gun and prepare to aim it at whatever is behind you...");				
+				alert("Before you realize it... a giant wolf-like monster stand before your gun... it lift it's hand towards you but luckily you shoot it before it can take any further action...");
+				alert("You made it out the house alive!");
+				exit=true;
+			}
+			else if (option7=="exit")
+			{
+				exit=true;
+			}
+			else
+			{
+				alert("Invalid input, try again.");
+			}
+		}	
+		else if (option6 == "sofa")
+		{
+			alert("You found a saw underneath the sofa cushion.");
+			prompt("Where do you want to search next? (only bed is left to search)");
+			if (option8 == "bed")
+			{
+			alert("You used the saw to cut open the wooden box... you found a key!");
+			alert("You used the key to open the door... you see a hallway infront of you leading you stright to a light that is the outsde of the house... walk towards the light... sunddenly... you heard someting fell from above behind you... you took out your gun and prepare to aim it at whatever is behind you...");				
+			alert("Before you realize it... a giant wolf-like monster stand before your gun... it lift it's hand towards you but luckily you shoot it before it can take any further action...");		
+			alert("You made it out the house alive!");
+			exit=true;
+			}
+			else if (option8=="exit")
+			{
+				exit=true;
+			}
+			else
+			{
+				alert("Invalid input, try again.");
+			}
+		}
+		else if (option6=="exit")
+		{
+			exit=true;
+		}
+		else
+		{
+			alert("Invalid input, try again.");
+		}
+	}	
+	else if (option1=="exit")
+	{
+		exit=true;
+	}
+	else
+	{
+	alert("Invalid input, try again.");
+	}
+}
+
+
+
+
+</script>
+</body>
+</html>

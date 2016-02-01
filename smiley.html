@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>DM2 | DOM</title>
+	
+	<link href="smiley.css" rel="stylesheet" type="text/css" media="all">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+	<script>
+
+	$(document).ready(function(){
+	
+	function event1()
+	{
+		$("#my_img1").slideUp();
+	}
+	function event2()
+	{
+		$("#my_img1").slideDown();
+	}
+	function event3()
+	{
+		$("#p_one").text("Epic smiley refers to a drawing of a round yellow-colored smiley face with upturned eyes. It has been predominantly used on sites and web forums emoji indicating approval or used ironically to convey disdain.");
+	}
+	function event4()
+	{
+		$("#p_one").append("<p>Visit: http://knowyourmeme.com/memes/awesome-face-epic-smiley</p>");
+	}
+	function event5()
+	{
+		$("#my_div").hide(); 
+	}
+	function event6()
+	{
+		$("#my_div").show(); 
+	}
+
+	$("#b1").click(event1);
+	$("#b2").click(event2);
+	$("#b3").click(event3);
+	$("#b4").click(event4);
+	$("#b5").click(event5);
+	$("#b6").click(event6);
+	}); 
+	
+	
+	</script>
+</head>
+<body>
+
+	<div id="my_div">
+		<center><h1>Epic Smile</h1></center>
+		<p id="p_one" class="p_text">
+		<p></p>
+		<figure><center>
+			<img src="images/icon.png" alt="Epic Smile" id="my_img1" class="my_img" />
+		</center></figure>	
+	</div>
+		<center>
+		<button id="b1">Bye!</button>
+		<button id="b2">Hi!</button>
+		<br>
+		<button id="b3">Biography</button>
+		<button id="b4">More Info!</button>
+		<br>
+		<button id="b5">Clear Page</button>
+		<button id="b6">Show Page</button>
+		</center>
+		
+		
+		
+	</script>
+		
+	
+	
+</body>
+</html>

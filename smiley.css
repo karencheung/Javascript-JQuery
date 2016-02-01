@@ -1,0 +1,25 @@
+html, body {
+	margin: 0;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 20pt;
+}
+
+}
+#my_div {
+	width: 980px;
+	margin: 20px auto;
+	padding: 20px;
+	background: #99FF66;
+}
+.p_text {
+	padding: 10px;
+	text-align: center;
+}
+#p_one {
+	color: #000000;
+	border: 5px solid #ffffff;
+}
+
+.my_img {
+	width: 300px;
+}

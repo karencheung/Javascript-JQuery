@@ -1,0 +1,155 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Time Value of Money Calculator</title>
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="Chart.js"></script>
+	<meta charset="utf-8">
+	<link href="time-value-of-money.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	var pv = 0;
+	var fv = 0;
+	var r = 0;
+	var p = 0;
+	var value = [];
+	
+	$("#button").click(button_click);
+		function button_click()
+		{
+			pv = 0;
+			fv = 0;
+			r = 0;
+			p = 0; 
+			value = [];
+			if($("#r").val().length != 0)
+			{
+			var r = $("#r").val();
+			r = parseFloat(r);
+			}
+			if($("#p").val().length != 0)
+			{
+			var p = $("#p").val();
+			p = parseInt(p);
+			}
+			if($("#pv").val().length != 0)
+			{
+			var pv = $("#pv").val(); 
+			pv = parseInt(pv);
+			var x = 1+r
+			value = pv*(Math.pow(x,p))
+			//the future value
+			graph(pv,value);
+			}
+			if($("#fv").val().length != 0)
+			{
+			var fv = $("#fv").val();
+			fv = parseInt(fv);
+			var x = 1+r
+			value = fv/(Math.pow(1+r,p))
+			//the present value
+			graph(value,fv);
+			}
+			//print value and round it to three decimal place
+		
+			var value_many_dec;
+			var value_2_dec;
+			value_many_dec = value;
+			value_2_dec = value.toFixed(3)
+		
+			$("#value").text(value_2_dec);
+		}
+			
+	
+	//function for future value graph
+	function graph(pv,value)
+	{
+		//The code for the graph was referred from http://www.chartjs.org/docs/#line-chart-introduction and there is a JQuery file for it called Chart.js
+		var lineChartData = {
+			labels : ["Present Value","Future Value"],
+			datasets : [
+				{
+					label: "The Amount of Money Accumulated Overtime",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [pv,value]
+				}
+			]
+
+		}
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+	}
+		
+	//function for present value graph
+	function graph(value,fv)
+	{
+		//The code for the graph was referred from http://www.chartjs.org/docs/#line-chart-introduction and there is a JQuery file for it called Chart.js
+		var lineChartData = {
+			labels : ["Present Value","Future Value"],
+			datasets : [
+				{
+					label: "The Amount of Money Accumulated Overtime",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : [value,fv]
+				}
+			]
+		}
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+	}
+});
+
+</script>
+<div id="wrapper">
+<center><h1>The Time Value of Money Calculator</h1>
+<br>
+<b><h2>What is the Time Value of Money?</h2>
+<p class="p_text">Time Value of Money is based from Corporate Finance, which states that an amount today is worth a different amount than at
+a future time. The Future Value measures a future sum of money that a given sum of money is worth at a specified time in the 
+future assuming a certain interest rate. The Present Value measure the present day value of an amount that is received at a
+future date which is always less than or equal to the future value because money has interest-earning potential.</b></p><br>
+</center>
+<div id="box">
+	<div id="questions"><center>
+		<br><b><h2>Let's Calculate!</h2>
+		To estimate the present value or future value of something, please fill out the known interest rate, <br>time period, and either the present value or future value for the questions below:<br> 
+		(Enter decimal value for interest rate)<br><br>
+		What is the present value?&nbsp;<input type="text" id="pv" class="mytext"><br><br>
+		What is the future value?&nbsp;<input type="text" id="fv" class="mytext"><br><br>
+		What is the rate of interest?&nbsp;<input type="text" id="r" class="mytext"><br><br>
+		How long is the period?&nbsp;<input type="text" id="p" class="mytext">
+	</b></div></center>
+</div>	
+	<br>
+	<center><button id="button">Value</button></center><br>
+	<center><div id="value">
+	</div></center>
+
+	<br>
+<center><div style="width:80%">
+	<div>
+		<canvas id="canvas" height="550" width="800"></canvas>
+	</div>
+</div></center>
+<br><br><br>
+		
+</body>
+</div>
+</html>
+
